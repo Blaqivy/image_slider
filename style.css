@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.image-slider {
+  min-height: 30em;
+  height: 100vh;
+  position: relative;
+  background-image: url(images/bg1.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: 0.3s;
+}
+.arrow-left,
+.arrow-right {
+  background: #fff;
+  position: absolute;
+  top: 40%;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.arrow-left:hover,
+.arrow-right:hover {
+  background-color: #000;
+  color: #fff;
+}
+.arrow-left {
+  left: 1em;
+}
+.arrow-right {
+  right: 1em;
+}
+.image-fade {
+  animation: imgFade 0.5s ease-in-out;
+}
+@keyframes imgFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  .image-slider {
+    background-size: 100% auto;
+  }
+}
